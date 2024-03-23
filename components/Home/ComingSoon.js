@@ -31,7 +31,7 @@ export default function ComingSoon(props) {
                 renderItem={
                     ({ item, index }) => {
                         return (
-                            <View style={{flex:1, flexDirection:"row", borderTopLeftRadius:20, borderTopRightRadius:20, backgroundColor:"white"}}>
+                            <View style={{flex:1, flexDirection:"row"}}>
                                 <View style={{flexDirection:"column"}}>
                                     <View style={{ justifyContent:"space-between", marginLeft:25, marginBottom:50}}>
                                         <Image style={{ width:160, height:200 }} source={{uri: item.uri}} />

@@ -7,13 +7,13 @@ import ComingSoon from '../components/Home/ComingSoon';
 
 
 
-export default function Home({ navigation }) {
+export default function Home() {
     return (
         <ScrollView>
             <View>
                 <Head /> 
                 <NewMovie />
-                <LogIn navigation={navigation} />
+                <LogIn />
                 <ComingSoon />
             </View>
         </ScrollView>
