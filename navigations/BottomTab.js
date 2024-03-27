@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from "@expo/vector-icons";
 import HomeStack from './HomeStack';
 import Communities from '../screens/Communities';
-import Promotion from '../screens/Promotion';
+import Promotion from '../screens/Discount';
+import Discount from '../screens/Discount';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,10 +29,10 @@ export default function BottomTab() {
                 }}
             />
             <Tab.Screen
-                name="Promotion"
-                component={Promotion}
+                name="Discount"
+                component={Discount}
                 options={{
-                    tabBarLabel: "Promotion",
+                    tabBarLabel: "Discount",
                     tabBarIcon: ({ color, size }) => (<FontAwesome name="tags" color={color} size={size} />),
                 }}
             />

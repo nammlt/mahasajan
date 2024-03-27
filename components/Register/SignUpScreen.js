@@ -1,14 +1,18 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function LogInScreen() {
+export default function SignUpScreen() {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Log In</Text>
+      <Text style={styles.title}>Sign Up</Text>
       <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          placeholder="Full Name"
+          autoCapitalize="words"
+        />
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -23,11 +27,11 @@ export default function LogInScreen() {
           autoCompleteType="password"
         />
       </View>
-      <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.buttonText}>Log In</Text>
+      <TouchableOpacity style={styles.signUpButton}>
+        <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")}>
-        <Text style={styles.signUpLink}>Don't have an account? Sign up here.</Text>
+      <TouchableOpacity onPress={() => navigation.navigate("LogInScreen")}>
+        <Text style={styles.logInLink}>Already have an account? Log in here.</Text>
       </TouchableOpacity>
     </View>
   );
@@ -56,8 +60,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 10,
   },
-  loginButton: {
-    backgroundColor: 'blue',
+  signUpButton: {
+    backgroundColor: 'green',
     padding: 15,
     borderRadius: 8,
   },
@@ -67,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  signUpLink: {
+  logInLink: {
     marginTop: 20,
     color: 'blue',
     textDecorationLine: 'underline',
