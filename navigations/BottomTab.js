@@ -2,9 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from "@expo/vector-icons";
 import HomeStack from './HomeStack';
-import Communities from '../screens/Communities';
-import Promotion from '../screens/Discount';
-import Discount from '../screens/Discount';
+import Task from '../screens/Task';
+import AuthStack from './AuthStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,19 +20,20 @@ export default function BottomTab() {
                 }}
             />
             <Tab.Screen
-                name="Communities"
-                component={Communities}
+                name="Bookmarks"
+                component={Task}
                 options={{
-                    tabBarLabel: "Communities",
-                    tabBarIcon: ({ color, size }) => (<FontAwesome name="users" color={color} size={size} />),
+                    tabBarLabel: "Bookmarks",
+                    tabBarIcon: ({ color, size }) => (<FontAwesome name="book" color={color} size={size} />),
                 }}
             />
             <Tab.Screen
-                name="Discount"
-                component={Discount}
+                name="Login"
+                component={AuthStack}
                 options={{
-                    tabBarLabel: "Discount",
-                    tabBarIcon: ({ color, size }) => (<FontAwesome name="tags" color={color} size={size} />),
+                    tabBarLabel: "Profile",
+                    tabBarIcon: ({ color, size }) => (<FontAwesome name="user" color={color} size={size} />),
+                    headerShown: false
                 }}
             />
         </Tab.Navigator>

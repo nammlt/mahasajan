@@ -1,8 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
-import LogInScreen from '../components/Register/LogInScreen';
-import SignUpScreen from '../components/Register/SignUpScreen';
+import NewMovieDetail from '../components/Home/NewMovieDetail';
+import NewMovie from '../components/Home/NewMovie';
+import Login from '../screens/Login';
+import Register from '../screens/Register';
+import ComingSoon from '../components/Home/ComingSoon';
+import CSMovieDetail from '../components/Home/CSMovieDetail';
 
 
 
@@ -14,17 +18,27 @@ export default function HomeStack() {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ headerShown : false }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="LogInScreen"
-        component={LogInScreen}
-        options={{ headerShown : false }}
+        name="NewMovie"
+        component={NewMovie}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="SignUpScreen"
-        component={SignUpScreen}
-        options={{ headerShown : false }}
+        name="NewMovieDetail"
+        component={NewMovieDetail}
+        options={{ title: "Movie Detail" }}
+      />
+      <Stack.Screen
+        name="CSMovie"
+        component={ComingSoon}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CSMovieDetail"
+        component={CSMovieDetail}
+        options={{ title: "Movie Detail" }}
       />
     </Stack.Navigator>
   );
